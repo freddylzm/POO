@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 12 06:51:43 2024
-
-@author: FIZ
+Scrit name: POO
+Brief Description: This script provides a simple example to explain object oriented programming concepts.
+Author: Freddy Zambrano
+Creation/Modification Date: March 1, 2024
+Script Version: 1.0
+Requirements/Dependencies: None
+Usage instructions: None
+Contact Information: freddyzm@gmail.com
+Additional Notes: This script serves as an example and does not provide accurate calculations for IMC
 """
 
 class Paciente():
@@ -65,26 +71,34 @@ class Diagnostico(IMC):
         else:
             return "Se recomienda una dieta baja en calorías y grasas, junto con ejercicio regular para controlar la obesidad."        
 
-Pedro = Paciente('Pedro', 123, 'Masculino')
-Ana = Paciente('Maria', 456, 'Femenino')
+""" Usando la clase Paciente """
+# Pedro = Paciente('Pedro', 123, 'Masculino')
+# Ana = Paciente('Maria', 456, 'Femenino')
 
-Pedro = DatosPaciente('Pedro', 123, 'Masculino', 72, 1.72)
-Ana = DatosPaciente('Maria', 456, 'Femenino', 65, 1.52)
+# print(vars(Pedro))
+# print(Pedro.ID)
 
-Pedro = IMC('Pedro', 123, 'Masculino', 72, 1.72)
-Ana = IMC('Maria', 456, 'Femenino', 65, 1.54)
+""" Usando la clase DatosPaciente """
+# Pedro = DatosPaciente('Pedro', 123, 'Masculino', 78, 1.72)
+# Ana = DatosPaciente('Maria', 456, 'Femenino', 52, 1.54)
 
-IMC_Pedro = Pedro.IMC()
+# print(vars(Pedro))
 
-print(f"{Pedro.nombre} tiene un IMC de {Pedro.IMC()} y su condición es {Pedro.condicionIMC()}. {Pedro.dieta()}")
+""" Usando la clase IMC """
+# Pedro = IMC('Pedro', 123, 'Masculino', 78, 1.72)
+# Ana = IMC('Maria', 456, 'Femenino', 52, 1.54)
+# print(Pedro.IMC())
+# print(f"{Pedro.nombre} tiene un IMC de {Pedro.IMC()} y su condición es {Pedro.condicionIMC()}. {Pedro.dieta()}")
 
-Pedro = Diagnostico('Pedro', 123, 'Masculino', 72, 1.72)
-Ana = Diagnostico('Maria', 456, 'Femenino', 65, 1.52)
+""" Usando la clase Diagnostico """
+# Pedro = Diagnostico('Pedro', 123, 'Masculino', 78, 1.72)
+# Ana = Diagnostico('Maria', 456, 'Femenino', 52, 1.54)
 
-print(f"{Pedro.nombre} tiene {Pedro.KgSobrepeso()} Kg de sobrepeso. {Pedro.dieta()}")
-print(f"{Ana.nombre} tiene {Ana.KgSobrepeso()} Kg de sobrepeso. {Ana.dieta()}")
+# print(f"{Pedro.nombre} tiene {Pedro.KgSobrepeso()} Kg de sobrepeso. {Pedro.dieta()}")
+# print(f"{Ana.nombre} tiene {Ana.KgSobrepeso()} Kg de sobrepeso. {Ana.dieta()}")
 
-Pedro = IMC('Pedro', 123, 'Masculino', 72, 1.72)
+""" Polimorfismo """
+Pedro = IMC('Pedro', 123, 'Masculino', 78, 1.72)
 print(Pedro.dieta())
-Pedro = Diagnostico('Pedro', 123, 'Masculino', 72, 1.72)
+Pedro = Diagnostico('Pedro', 123, 'Masculino', 78, 1.72)
 print(Pedro.dieta())
